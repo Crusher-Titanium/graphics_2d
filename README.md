@@ -13,3 +13,8 @@ window.draw_dot(125, 25) #x2, y2
 window.draw_line(100, 50, 125, 25)
 window.show()
 ```
+1.0.0 functions:
+--draw.dot()
+
+changelog 1.0.1:
+--added draw_line()
