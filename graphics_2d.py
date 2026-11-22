@@ -18,9 +18,11 @@ class Window:
         dot()
 
     def draw_line(self, x1, y1, x2, y2):
-        goto(x1, y1)
-        dot()
+        self.draw_dot(x1, y1)
         pendown()
-        goto(x2, y2)
-        dot()
+        self.draw_dot(x2, y2)
         penup()
+    def draw_triangle(self, x1, y1, x2, y2, x3, y3):
+        self.draw_line(x1, y1, x2, y2)
+        self.draw_line(x2, y2, x3, y3)
+        self.draw_line(x3, y3, x1, y1)
