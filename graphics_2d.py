@@ -1,4 +1,4 @@
-from turtle import goto, setup, penup, dot, done, tracer, update, hideturtle
+from turtle import goto, setup, penup, pendown, dot, done, tracer, update, hideturtle
 
 class Window:
     def __init__(self):
@@ -16,3 +16,11 @@ class Window:
     def draw_dot(self, x, y):
         goto(x, y)
         dot()
+
+    def draw_line(self, x1, y1, x2, y2):
+        goto(x1, y1)
+        dot()
+        pendown()
+        goto(x2, y2)
+        dot()
+        penup()
