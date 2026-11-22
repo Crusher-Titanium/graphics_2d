@@ -8,21 +8,30 @@ class Window:
         tracer(0)
         penup()
         hideturtle()
+        self.vertices = {}
 
     def show(self):
         update()
         done()
 
-    def draw_dot(self, x, y):
-        goto(x, y)
+    def add_vertex(self, x, y):
+        self.vertices["vertex"+str(len(self.vertices)+1)] = [x, y]
+
+    def draw_dot(self, vertex):
+        goto(self.vertices["vertex"+str(vertex)][0], self.vertices["vertex"+str(vertex)][1])
         dot()
 
-    def draw_line(self, x1, y1, x2, y2):
-        self.draw_dot(x1, y1)
+    def draw_line(self, vertex1, vertex2):
+        self.draw_dot(vertex1)
         pendown()
-        self.draw_dot(x2, y2)
+        self.draw_dot(vertex2)
         penup()
-    def draw_triangle(self, x1, y1, x2, y2, x3, y3):
-        self.draw_line(x1, y1, x2, y2)
-        self.draw_line(x2, y2, x3, y3)
-        self.draw_line(x3, y3, x1, y1)
+
+    def draw_triangle(self, vertex1, vertex2, vertex3):
+        self.draw_line(vertex1, vertex2)
+        self.draw_line(vertex2, vertex3)
+        self.draw_line(vertex3, vertex1)
+
+    def draw_quad(self, vertex1, vertex2, vertex3, vertex4):
+        self.draw_triangle(vertex1, vertex2, vertex3)
+        self.draw_triangle(vertex4, vertex3, vertex2)
