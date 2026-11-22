@@ -1,4 +1,4 @@
-# graphics_2d (v1.0.0)
+# graphics_2d (v1.0.1)
 
 2d graphics around turtle
 
@@ -8,6 +8,8 @@
 import graphics_2d
 
 window = graphics_2d.Window()
-window.draw_dot(123, 56)
+window.draw_dot(100, 50) #x1, y1
+window.draw_dot(125, 25) #x2, y2
+window.draw_line(100, 50, 125, 25)
 window.show()
 ```
