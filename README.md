@@ -14,7 +14,7 @@ window.draw_line(100, 50, 125, 25)
 window.show()
 ```
 1.0.0 functions:
---draw.dot()
+--draw_dot()
 
 changelog 1.0.1:
 --added draw_line()
