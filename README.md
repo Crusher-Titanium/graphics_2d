@@ -20,15 +20,17 @@ window.draw_quad(1, 2, 3, 4)
 window.show()
 ```
 1.0.0 functions:
---draw_dot()
+- draw_dot()
+
+### Changelog
 
 changelog 1.0.1:
---added draw_line()
+- added draw_line()
 
 changelog 1.0.2:
---added draw_triangle()
+- added draw_triangle()
 
 changelog 1.1.0:
---remake system added vertices
---added add_vertex
---added draw_quad()
+- remake system added vertices
+- added add_vertex
+- added draw_quad()
